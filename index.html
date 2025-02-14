@@ -17,7 +17,6 @@
     <h1>⋆｡‧˚ʚ⋆Menu⋆ɞ˚‧｡⋆</h1>
     <div id="menuContainer"></div>
     <button id="submitBtn">Submit</button>
-    <p id="message"></p> <!-- This will display the success message -->
     <div id="successMessage" class="hidden">⋆｡‧˚ʚ⋆Yyyyt! Vec te hash di⋆ɞ˚‧｡⋆
     </div> 
 
@@ -42,6 +41,15 @@
             const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
             displayMenu(jsonData);
         }
+
+        function setViewportHeight() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+
+        window.addEventListener('resize', setViewportHeight);
+        window.addEventListener('load', setViewportHeight);
+
         
         function displayMenu(data) {
             const container = document.getElementById('menuContainer');
@@ -136,3 +144,4 @@
     </script>
 </body>
 </html>
+ 
