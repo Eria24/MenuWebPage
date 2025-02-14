@@ -12,6 +12,7 @@ body {
     background-position: center; /* Centers the image */
     background-attachment: fixed; /* Keeps the image fixed while scrolling */
     position: relative; /* Needed for the overlay */
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 body::before {
@@ -144,4 +145,20 @@ h1 {
 /* Utility class to hide elements */
 .hidden {
     display: none;
+    margin: 0; /* Ensure no margin */
+    padding: 0; /* Ensure no padding */
+}
+
+.fixed-element {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 1000;
+}
+
+.container {
+    overflow: hidden; /* Use carefully */
+    min-height: 100vh; /* Ensure it fills the viewport */
 }
