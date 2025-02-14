@@ -49,6 +49,7 @@
 
         window.addEventListener('resize', setViewportHeight);
         window.addEventListener('load', setViewportHeight);
+        window.addEventListener('scroll', setViewportHeight);
 
         
         function displayMenu(data) {
@@ -136,6 +137,10 @@
 
                 // Append the image to the success message div
                 successMessage.appendChild(img);
+                document.body.style.overflow = 'hidden';
+                setTimeout(() => {
+                    document.body.style.overflow = 'auto';
+                }, 100);
 
             })
         },    { once: true });   
@@ -144,4 +149,4 @@
     </script>
 </body>
 </html>
- 
+        
