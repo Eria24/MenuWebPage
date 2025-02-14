@@ -13,6 +13,7 @@ body {
     background-attachment: fixed; /* Keeps the image fixed while scrolling */
     position: relative; /* Needed for the overlay */
     height: calc(var(--vh, 1vh) * 100);
+    transform: translateZ(0);
 }
 
 body::before {
