@@ -13,9 +13,8 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-body::before {
-    content: "";
-    position: fixed; /* Fixed position for the background */
+#background {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -28,7 +27,7 @@ body::before {
 
 body::after {
     content: "";
-    position: fixed; /* Fixed position for the overlay */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
