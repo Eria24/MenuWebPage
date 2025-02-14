@@ -1,0 +1,139 @@
+/* General styles */
+body {
+    background-image: url('background.jpg'); /* Replace with your image name */
+    background-size: cover; /* Ensures the image covers the whole screen */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay (adjust opacity) */
+    z-index: -1;
+}
+
+h1 {
+    font-size: 36px; /* Increase size */
+    font-weight: bold; /* Make it bold */
+    text-align: center; /* Center it */
+    color: #0a335f;  /* Blue color (change if needed) */
+    margin-bottom: 20px; /* Add spacing below */
+    font-family: "Darumadrop One", serif;
+    font-weight: 400;
+    font-style: normal;
+    background: rgba(131, 149, 169, 0.7);
+    padding: 5px 150px;
+    border-radius: 8px; /* Rounded corners */
+    display: block; /* Ensure it's treated as a block element */
+    width: fit-content; /* Make it wrap around the text */
+    margin: 20px auto;
+
+}
+
+
+.menu-item {
+    display: flex;
+    align-items: center; /* Align items in the same row */
+    background: #f1f1f1;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    gap: 10px; /* Space between checkbox and text */
+}
+
+/* Style for description below the item */
+
+.description {
+    font-size: 14px;
+    color: #2e4864;
+    text-align: right; /* Align text to the right */
+    width: 100%; /* Make it take full width of the container */
+    margin-top: 4px;
+}
+
+
+
+/* Menu container */
+#menuContainer {
+    
+    max-width: 400px;
+    margin: 0 auto;
+    background: rgb(131, 149, 169, 0.7);
+    color: #13345d;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 250, 250, 0.1);
+    font-family: "Darumadrop One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Category header */
+.category {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 5px;
+    border-bottom: 2px solid #13345d; /* Blue line under categories */
+}
+
+/* Checkbox */
+.menu-item input {
+    margin-right: 10px;
+}
+
+/* Submit button */
+#submitBtn {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #838da9; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#submitBtn:hover {
+    background-color: #6a7594; /* Darker green */
+}
+
+/* Success message styles */
+#successMessage {
+    display: none; /* Hidden by default */
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(131, 149, 169, 0.7);
+    color: #cddbe9;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+    font-family: "Darumadrop One", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+/* Animation for the success message */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Utility class to hide elements */
+.hidden {
+    display: none;
+}
