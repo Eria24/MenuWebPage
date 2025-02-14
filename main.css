@@ -12,17 +12,18 @@ body {
     background-position: center; /* Centers the image */
     background-attachment: fixed; /* Keeps the image fixed while scrolling */
     position: relative; /* Needed for the overlay */
-    height: calc(var(--vh, 1vh) * 100);
+    min-height: 100vh; /* Ensure body expands to fit content */
+    height: auto; /* Allow body to grow with content */
     transform: translateZ(0);
 }
 
 body::before {
     content: "";
-    position: fixed;
+    position: absolute; /* Change from fixed to absolute */
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100%; /* Cover the entire body */
     background: rgba(0, 0, 0, 0.5); /* Dark overlay (adjust opacity) */
     z-index: -1;
 }
