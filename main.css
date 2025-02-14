@@ -27,14 +27,14 @@ h1 {
     font-weight: 400;
     font-style: normal;
     background: rgba(131, 149, 169, 0.7);
-    padding: 5px 150px;
-    border-radius: 8px; /* Rounded corners */
-    display: block; /* Ensure it's treated as a block element */
-    width: fit-content; /* Make it wrap around the text */
-    margin: 20px auto;
-
+    padding: 10px; /* Adjust padding for better spacing */
+    border-radius: 10px; /* Rounded corners */
+    display: block; /* Ensure it's a block element */
+    max-width: 400px; /* Same as #menuContainer */
+    width: 100%; /* Make it flexible */
+    margin: 20px auto; /* Center the element */
+    box-sizing: border-box; /* Ensure padding doesn't increase width */
 }
-
 
 .menu-item {
     display: flex;
