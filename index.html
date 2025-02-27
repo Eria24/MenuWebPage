@@ -127,14 +127,10 @@
 
                 // Show a success message
                 const successMessage = document.getElementById("successMessage");
-                successMessage.style.display = "block";
                 const img = document.createElement("img");
                 img.src = "end.jpg"; // Replace with the path or URL of your image
                 img.alt = "Success Image"; // Add alt text for accessibility
-                img.style.display = "block"; // Ensure the image is displayed as a block element
-                img.style.margin = "20px auto"; // Center the image horizontally
-                img.style.maxWidth = "100%"; // Ensure the image doesn't overflow
-                img.style.height = "auto"; // Maintain aspect ratio
+
 
                 // Append the image to the success message div
                 successMessage.appendChild(img);
