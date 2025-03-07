@@ -35,7 +35,7 @@ function displayMenu(data) {
   for (let i = 1; i < data.length; i++) { // Skip header row
     const [itemName, description, category] = data[i];
 
-    // Create category header if it's a new category
+    
     if (category !== currentCategory) {
       const categoryHeader = document.createElement('div');
       categoryHeader.className = 'category';
@@ -44,32 +44,32 @@ function displayMenu(data) {
       currentCategory = category;
     }
 
-    // Create a wrapper for each menu item
+    
     const menuItemWrapper = document.createElement('div');
     menuItemWrapper.className = 'menu-item';
 
-    // Create the checkbox
+    
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.name = 'menu';
     checkbox.value = itemName;
 
-    // Create a label for the item name
+    
     const itemLabel = document.createElement('label');
     itemLabel.textContent = itemName;
     itemLabel.classList.add('item-label');
 
-    // Create a div for the description
+   
     const descriptionDiv = document.createElement('div');
     descriptionDiv.textContent = description;
     descriptionDiv.className = 'description';
 
-    // Append everything to the wrapper
+   
     menuItemWrapper.appendChild(checkbox);
     menuItemWrapper.appendChild(itemLabel);
     menuItemWrapper.appendChild(descriptionDiv);
 
-    // Append to the container
+   
     container.appendChild(menuItemWrapper);
   }
 }
@@ -92,19 +92,16 @@ document.getElementById("submitBtn").addEventListener("click", () => {
     document.getElementById("menuContainer").style.display = "none";
     document.getElementById("submitBtn").style.display = "none";
   
-    // Show the success message
+   
     const successMessage = document.getElementById("successMessage");
-    // Remove the hidden class
+   
     successMessage.classList.remove("hidden");
   
-    // Alternatively, you could directly set its display style:
-    // successMessage.style.display = "block";
-  
     const img = document.createElement("img");
-    img.src = "end.jpg"; // Replace with your image path
+    img.src = "end.jpg";
     img.alt = "Success Image";
     
-    // Append the image to the success message div
+    
     successMessage.appendChild(img);
   
     document.body.style.overflow = 'hidden';
